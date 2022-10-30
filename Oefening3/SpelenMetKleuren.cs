@@ -12,6 +12,12 @@ namespace Oefening3
 {
     public partial class SpelenMetKleuren : Form
     {
+
+
+        public static List<Rechthoek> rechthoeken = new List<Rechthoek>();
+        
+        
+       
         public SpelenMetKleuren()
         {
             InitializeComponent();
@@ -21,7 +27,21 @@ namespace Oefening3
         {
             Rechthoek rechthoek = new Rechthoek();
             rechthoek.MdiParent = this;
-            rechthoek.Show();
+            rechthoeken.Add(rechthoek);
+            rechthoeken[rechthoeken.Count-1].Show();
+        }
+
+        private void btn_rechthoek_verwijderen_Click(object sender, EventArgs e)
+        {
+            if (rechthoeken.Count != 0)
+            {
+                rechthoeken[rechthoeken.Count - 1].Close();
+                rechthoeken.RemoveAt(rechthoeken.Count - 1);
+            }
+            else {
+                MessageBox.Show("Er zijn geen rechthoeken meer!");
+            }
+            
         }
     }
 }

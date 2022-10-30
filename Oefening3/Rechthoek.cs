@@ -12,19 +12,22 @@ namespace Oefening3
 {
     public partial class Rechthoek : Form
     {
+
+        ColourDialogue dmenu = new ColourDialogue();
         public Rechthoek()
         {
+            
             InitializeComponent();
         }
 
         private void Rechthoek_MouseHover(object sender, EventArgs e)
         {
-            this.BackColor = Color.Red;
+            dmenu.Show();
         }
 
         private void Rechthoek_MouseLeave(object sender, EventArgs e)
         {
-            this.BackColor = Color.White;
+            dmenu.Hide();
         }
     }
 }

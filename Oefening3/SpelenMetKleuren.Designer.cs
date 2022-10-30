@@ -50,6 +50,7 @@
             this.btn_rechthoek_verwijderen.TabIndex = 2;
             this.btn_rechthoek_verwijderen.Text = "Rechthoek Verwijderen";
             this.btn_rechthoek_verwijderen.UseVisualStyleBackColor = true;
+            this.btn_rechthoek_verwijderen.Click += new System.EventHandler(this.btn_rechthoek_verwijderen_Click);
             // 
             // SpelenMetKleuren
             // 
